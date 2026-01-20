@@ -28,3 +28,22 @@ def sumOfNumber(n):
         return result
     
 print("Final answer:",sumOfNumber(5))
+
+def power(x,y):
+    print("calling power(",x,"),",y,")")
+
+    if y ==1:
+        print("base cape reached:power(",x",1)=",x)
+        return x
+    else:
+        half=power(x,y//2)
+    
+    if y % 2==0:
+        result =half * half
+        print("returning", result,"for power (",x,",",y,")")
+        return result
+    else:
+        result=x * half * half
+        print("returning", result,"for power (",x,",",y,")")
+        return result
+print("Final answer:",power(3,5))
